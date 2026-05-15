@@ -31,49 +31,119 @@
   </script>
 </head>
 <body>
-  <header class="bg-dark text-white">
-    <nav class="container mx-auto flex items-center justify-between py-4">
-      <div class="text-2xl font-bold">Mon Portfolio</div>
-      <ul class="flex space-x-6">
-        <li><a href="#home" class="hover:text-gold">Accueil</a></li>
-        <li><a href="#about" class="hover:text-gold">À propos</a></li>
-        <li><a href="#projects" class="hover:text-gold">Projets</a></li>
-        <li><a href="#contact" class="hover:text-gold">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="cursor"></div>
+<div id="cursor-ring"></div>
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-6 py-5 md:px-12">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
 
-  <section id="home" class="bg-dark-2 text-white py-20">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Bienvenue sur mon Portfolio</h1>
-      <p class="text-lg md:text-xl mb-8">Découvrez mes projets et compétences en développement web.</p>
-      <a href="#projects" class="bg-gold text-dark px-6 py-3 rounded hover:bg-gold-light transition">Voir mes projets</a>
+    <a href="#hero" class="font-['Playfair_Display'] text-xl font-bold">
+      M<span class="gold">.</span>Portfolio
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 text-sm font-light tracking-wide">
+      <li><a href="#about"      class="nav-link hover:text-white transition-colors">À propos</a></li>
+      <li><a href="#formation"  class="nav-link hover:text-white transition-colors">Formation</a></li>
+      <li><a href="#experience" class="nav-link hover:text-white transition-colors">Expérience</a></li>
+      <li><a href="#skills"     class="nav-link hover:text-white transition-colors">Compétences</a></li>
+      <li><a href="#projects"   class="nav-link hover:text-white transition-colors">Projets</a></li>
+      <li>
+        <a href="#contact" class="px-5 py-2 border gold-border text-sm gold hover:bg-gold hover:text-black transition-all rounded-sm">
+          Contact
+        </a>
+      </li>
+    </ul>
+
+    <button id="hamburger" class="md:hidden flex flex-col gap-1.5" aria-label="Menu">
+      <span class="w-6 h-px bg-white block"></span>
+      <span class="w-6 h-px bg-white block"></span>
+      <span class="w-4 h-px bg-white block ml-auto"></span>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-white/5">
+    <ul class="flex flex-col gap-4 pt-4 text-sm pl-1">
+      <li><a href="#about"      class="mobile-link block hover:text-gold transition-colors">À propos</a></li>
+      <li><a href="#formation"  class="mobile-link block hover:text-gold transition-colors">Formation</a></li>
+      <li><a href="#experience" class="mobile-link block hover:text-gold transition-colors">Expérience</a></li>
+      <li><a href="#skills"     class="mobile-link block hover:text-gold transition-colors">Compétences</a></li>
+      <li><a href="#projects"   class="mobile-link block hover:text-gold transition-colors">Projets</a></li>
+      <li><a href="#contact"    class="mobile-link block gold">Contact</a></li>
+    </ul>
+  </div>
+  <section id="hero" class="relative min-h-screen flex items-center px-6 md:px-12 overflow-hidden">
+
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-1/4 right-0 w-96 h-96 rounded-full opacity-5"
+         style="background: radial-gradient(circle, var(--gold), transparent 70%);"></div>
+    <div class="absolute bottom-1/4 left-0 w-64 h-64 rounded-full opacity-5"
+         style="background: radial-gradient(circle, var(--gold), transparent 70%);"></div>
+    <div class="absolute inset-0"
+         style="background-image: linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+                                  linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+                background-size: 80px 80px;"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto w-full relative z-10 pt-24">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <p class="section-label mb-6 fade-up">Développeur Web Frontend</p>
+
+        <h1 class="hero-name font-black mb-6 fade-up" style="transition-delay: 0.1s">
+          <br/>NDEYE MAGUETTE THIAW
+        </h1>
+
+        <p class="text-white/50 text-lg font-light max-w-md leading-relaxed mb-10 fade-up"
+           style="transition-delay: 0.2s">
+          Passionné par la création d'interfaces web modernes et performantes.
+          Étudiante en développement web à UNIPRO.
+        </p>
+
+        <div class="flex flex-wrap gap-4 fade-up" style="transition-delay: 0.3s">
+          <a href="#projects"
+             class="px-7 py-3.5 gold-bg text-black font-medium text-sm tracking-wide hover:opacity-90 transition-opacity rounded-sm">
+            Voir mes projets
+          </a>
+          <a href="#contact"
+             class="px-7 py-3.5 border border-white/20 text-sm tracking-wide hover:border-white/60 transition-colors rounded-sm">
+            Me contacter
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-8 fade-up" style="transition-delay: 0.2s">
+        <div class="relative">
+          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 gold-border">
+              <img src="c:\Users\hp\Pictures\Camera Roll\WhatsApp Image 2026-05-11 at 01.50.00 (1).jpeg" alt="NDEYE MAGUETTE" class="w-full h-full object-cover" />
+        
+            <div class="w-full h-full flex items-center justify-center" style="background: var(--dark-3);">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none"
+                   stroke="rgba(201,168,76,0.4)" stroke-width="1">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="absolute -inset-3 rounded-full border border-gold/20 -z-10"></div>
+          <div class="absolute -inset-6 rounded-full border border-gold/10 -z-10"></div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 w-full max-w-xs">
+          <div class="text-center">
+            <p class="text-2xl font-bold gold font-['Playfair_Display']">2+</p>
+            <p class="text-xs text-white/40 mt-1">ans d'études</p>
+          </div>
+          <div class="text-center border-x border-white/5">
+            <p class="text-2xl font-bold gold font-['Playfair_Display']">10+</p>
+            <p class="text-xs text-white/40 mt-1">projets</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold gold font-['Playfair_Display']">5+</p>
+            <p class="text-xs text-white/40 mt-1">technologies</p>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
   </section>
-
-  <section id="about" class="bg-dark-3 text-white py-20">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-4">À propos</h2>
-      <p class="text-lg">Je suis un développeur web passionné par la création de solutions numériques innovantes.</p>
-    </div>
-  </section>
-
-  <section id="projects" class="bg-dark-2 text-white py-20">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-4">Projets</h2>
-      <p class="text-lg">Découvrez quelques-uns de mes projets récents.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="bg-dark-3 text-white py-20">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-4">Contact</h2>
-      <p class="text-lg">N'hésitez pas à me contacter pour toute question ou opportunité.</p>
-    </div>
-  </section>
-
-  <footer class="bg-dark text-white py-4">
-    <div class="container mx-auto text-center">
-      &copy; 2024 Mon Portfolio. Tous droits réservés.
-    </div>
-  </footer>
